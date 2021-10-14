@@ -2,10 +2,10 @@ import os
 import sys
 
 from kivy.app import App
-from kivy.properties import StringProperty
+# from kivy.properties import StringProperty
 from kivy.properties import ObjectProperty
-from kivy.uix.popup import Popup
-from kivy.uix.label import Label
+# from kivy.uix.popup import Popup
+# from kivy.uix.label import Label
 from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
@@ -27,6 +27,7 @@ class Games(Screen):
 
 ms = ScreenManager()
 ms.add_widget(Games(name="games"))
+
 
 class StartApp(GetInput, App):
     def __init__(self):

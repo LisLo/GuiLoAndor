@@ -22,7 +22,7 @@ class StartApp(GetInput, App):
     def build(self):
         Window.clearcolor = (1, 1, 1, 1)
         # print(self.A1)
-        return GUI # ms
+        return GUI
 
 
 if __name__ == "__main__":

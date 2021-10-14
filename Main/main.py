@@ -16,17 +16,18 @@ root_path = os.path.split((os.path.dirname(__file__)))[0]
 sys.path.append(root_path)
 from Source.Config.get_input import GetInput
 
-Builder.load_file("start.kv")
+Window.size = (1000,700)
+GUI = Builder.load_file("main.kv")
 
 
-class Games(Screen):
-    btn1 = ObjectProperty()
-    btn2 = ObjectProperty()
-    btn3 = ObjectProperty()
+# class Games(Screen):
+    #btn1 = ObjectProperty()
+    #btn2 = ObjectProperty()
+    #btn3 = ObjectProperty()
 
 
-ms = ScreenManager()
-ms.add_widget(Games(name="games"))
+# ms = ScreenManager()
+# ms.add_widget(Games(name="games"))
 
 
 class StartApp(GetInput, App):
@@ -35,8 +36,8 @@ class StartApp(GetInput, App):
 
     def build(self):
         Window.clearcolor = (1, 1, 1, 1)
-        print(self.A1)
-        return ms
+        # print(self.A1)
+        return GUI # ms
 
 
 if __name__ == "__main__":

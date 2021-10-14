@@ -1,0 +1,49 @@
+#:import utils kivy.utils
+
+<Andor3>
+    button: btn3_1
+    button: btn3_2
+    button: btn3_3
+    button: btn3_4
+    button: btn3_5
+    button: btn3_6
+
+    Image:
+        source: "Main/Pictures/dragon.png"
+        allow_stretch: True
+        keep_ratio: False
+
+    GridLayout:
+        cols: 3
+        Button:
+            text: "Legende 1"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn3_1
+            size_hint: (.5, 1)
+            on_release:
+                root.manager.current = "login"
+                root.manager.transition.direction = "up"
+        Button:
+            text: "Legende 2 "
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn3_2
+            size_hint: (.5, 1)
+        Button:
+            text: "Legende 3"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn3_3
+        Button:
+            text: "Legende 4"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn3_4
+        Button:
+            text: "Legende 5"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn3_5
+        Button:
+            text: "zurück"
+            background_normal: "Main/Pictures/Schwarze_Kogge.png"
+            id: btn3_6
+            on_release:
+                root.manager.current = "games"
+                root.manager.transition.direction = "down"

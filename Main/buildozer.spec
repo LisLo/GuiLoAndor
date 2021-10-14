@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Paint App
+title = Legend of Andor GUI
 
 # (str) Package name
-package.name = paintApp
+package.name = loaGUI
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.loerinci

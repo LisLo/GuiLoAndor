@@ -4,6 +4,7 @@ from Source.Config.read_json import ReadJson
 
 class GetInput():
     def __init__(self, main_code_path):
+        super().__init__()
         self.main_code_path = main_code_path
         self.__read_input_parameters()
 

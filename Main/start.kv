@@ -1,0 +1,287 @@
+<Button>:
+    font_size: 40
+    bold: True
+    italic: True
+
+<Games>:
+    button: btn1
+    button: btn2
+    button: btn3
+
+    PageLayout:
+        Button:
+            text: "Andor Teil 1"
+            id:btn1
+            background_normal: "Main/Pictures/Andor-Trilogie-1.jpg"
+            on_release:
+                root.manager.current = "andor1"
+                root.manager.transition.direction = "up"
+        Button:
+            text: "Andor Teil 2"
+            id:btn2
+            background_normal: "Main/Pictures/Andor-Trilogie-2.jpg"
+            on_release:
+                root.manager.current = "andor2"
+                root.manager.transition.direction = "up"
+        Button:
+            text: "Andor Teil 3"
+            id:btn3
+            background_normal: "Main/Pictures/Andor-Trilogie-3.jpg"
+            on_release:
+                root.manager.current = "andor3"
+                root.manager.transition.direction = "up"
+        Button:
+            text: "Bonus Legenden"
+            id:btn3
+            background_normal: "Main/Pictures/Schwarze_Kogge.png"
+            on_release:
+                root.manager.current = "bonus"
+                root.manager.transition.direction = "up"
+
+
+<Andor1>
+    button: btn_1
+    button: btn_2
+    button: btn_3
+    button: btn_4
+    button: btn_5
+    button: btn_6
+
+    Image:
+        source: "Main/Pictures/dragon.png"
+        allow_stretch: True
+        keep_ratio: False
+
+    GridLayout:
+        cols: 3
+        Button:
+            text: "Legende 1 \n Die Ankunft \n der Helden"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn_1
+            size_hint: (.5, 1)
+            on_release:
+                root.manager.current = "login"
+                root.manager.transition.direction = "up"
+        Button:
+            text: "Legende 2 \n Die Heilung \n des Königs"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn_2
+            size_hint: (.5, 1)
+        Button:
+            text: "Legende 3 \n Die Tage \n des Wider-\n stands"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn_3
+        Button:
+            text: "Legende 4 \n Das Geheimnis \n der Mine"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn_4
+        Button:
+            text: "Legende 5 -\n Der Zorn \n des Drachen"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn_5
+        Button:
+            text: "zurück"
+            background_normal: "Main/Pictures/Schwarze_Kogge.png"
+            id: btn_6
+            on_release:
+                root.manager.current = "games"
+                root.manager.transition.direction = "down"
+
+<Andor2>
+    button: btn2_1
+    button: btn2_2
+    button: btn2_3
+    button: btn2_4
+    button: btn2_5
+    button: btn2_6
+
+    Image:
+        source: "Main/Pictures/dragon.png"
+        allow_stretch: True
+        keep_ratio: False
+
+    GridLayout:
+        cols: 3
+        Button:
+            text: "Legende 1 "
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn2_1
+            size_hint: (.5, 1)
+            on_release:
+                root.manager.current = "login"
+                root.manager.transition.direction = "up"
+        Button:
+            text: "Legende 2"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn2_2
+            size_hint: (.5, 1)
+        Button:
+            text: "Legende 3"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn2_3
+        Button:
+            text: "Legende 4 "
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn2_4
+        Button:
+            text: "Legende 5 "
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn2_5
+        Button:
+            text: "zurück"
+            background_normal: "Main/Pictures/Schwarze_Kogge.png"
+            id: btn2_6
+            on_release:
+                root.manager.current = "games"
+                root.manager.transition.direction = "down"
+
+<Andor3>
+    button: btn3_1
+    button: btn3_2
+    button: btn3_3
+    button: btn3_4
+    button: btn3_5
+    button: btn3_6
+
+    Image:
+        source: "Main/Pictures/dragon.png"
+        allow_stretch: True
+        keep_ratio: False
+
+    GridLayout:
+        cols: 3
+        Button:
+            text: "Legende 1"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn3_1
+            size_hint: (.5, 1)
+            on_release:
+                root.manager.current = "login"
+                root.manager.transition.direction = "up"
+        Button:
+            text: "Legende 2 "
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn3_2
+            size_hint: (.5, 1)
+        Button:
+            text: "Legende 3"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn3_3
+        Button:
+            text: "Legende 4"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn3_4
+        Button:
+            text: "Legende 5"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn3_5
+        Button:
+            text: "zurück"
+            background_normal: "Main/Pictures/Schwarze_Kogge.png"
+            id: btn3_6
+            on_release:
+                root.manager.current = "games"
+                root.manager.transition.direction = "down"
+
+<Bonus>
+    button: btn4_1
+    button: btn4_2
+    button: btn4_3
+    button: btn4_4
+    button: btn4_5
+    button: btn4_6
+    
+    Image:
+        source: "Main/Pictures/dragon.png"
+        allow_stretch: True
+        keep_ratio: False
+
+    GridLayout:
+        cols: 3
+        Button:
+            text: "Legende 1"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn4_1
+            size_hint: (.5, 1)
+            on_release:
+                root.manager.current = "login"
+                root.manager.transition.direction = "up"
+        Button:
+            text: "Legende 2"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn4_2
+            size_hint: (.5, 1)
+        Button:
+            text: "Legende 3"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn4_3
+        Button:
+            text: "Legende 4"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn4_4
+        Button:
+            text: "Legende 5"
+            background_normal: "Main/Pictures/Legenden.png"
+            id: btn4_5
+        Button:
+            text: "zurück"
+            background_normal: "Main/Pictures/Schwarze_Kogge.png"
+            id: btn4_6
+            on_release:
+                root.manager.current = "games"
+                root.manager.transition.direction = "down"
+
+<Login>:
+    ben: benName.text
+    pw: passwort.text
+    knopf: btn
+
+    Image:
+        source: "Main/Pictures/dragon.png"
+        allow_stretch: True
+        keep_ratio: False
+
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+        GridLayout:
+            cols: 2
+            Label:
+                text: "Benutzername"
+                font_size: 30
+            TextInput:
+                id: benName
+                multiline: False
+                font_size: 30
+            Label:
+                text: "Passwort"
+                font_size: 30
+                
+            TextInput:
+                password: True
+                id: passwort
+                multiline: False
+                font_size: 30
+        Button:
+            text: "anmelden"
+            background_normal: "Main/Pictures/IMG_6515.jpg"
+            id: btn
+            size_hint: (1., 0.5)
+            font_size: 30
+            on_release:
+                root.loginPopup()
+                root.manager.current = "geheim" if passwort.text == "1234" and benName.text == "Python" else "login"
+                root.manager.transition.direction = "left"
+
+<geheimerBereich>:
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "geheimer Bereich"
+            font_size: 30
+        Button:
+            text: "zurück"
+            font_size: 30
+            on_release:
+                root.manager.current = "login"
+                root.manager.transition.direction = "right"

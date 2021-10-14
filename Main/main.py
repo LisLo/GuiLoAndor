@@ -1,36 +1,42 @@
-from random import random
+import os
+import sys
+
 from kivy.app import App
-from kivy.uix.widget import Widget
-from kivy.uix.button import Button
-from kivy.graphics import Color, Ellipse, Line
+from kivy.properties import StringProperty
+from kivy.properties import ObjectProperty
+from kivy.uix.popup import Popup
+from kivy.uix.label import Label
+from kivy.core.window import Window
+from kivy.lang import Builder
+from kivy.uix.screenmanager import ScreenManager, Screen
+
+# find root dir
+root_path = os.path.split((os.path.dirname(__file__)))[0]
+# set root
+sys.path.append(root_path)
+from Source.Config.get_input import GetInput
+
+Builder.load_file("start.kv")
 
 
-class MyPaintWidget(Widget):
-    def on_touch_down(self, touch):
-        color = (random(), random(), random())
-        with self.canvas:
-            Color(*color)
-            d = 40.
-            Ellipse(pos=(touch.x - d / 2, touch.y - d / 2), size=(d, d))
-            touch.ud['line'] = Line(points=(touch.x, touch.y))
-
-    def on_touch_move(self, touch):
-        touch.ud['line'].points += [touch.x, touch.y]
+class Games(Screen):
+    btn1 = ObjectProperty()
+    btn2 = ObjectProperty()
+    btn3 = ObjectProperty()
 
 
-class MyPaintApp(App):
+ms = ScreenManager()
+ms.add_widget(Games(name="games"))
+
+class StartApp(GetInput, App):
+    def __init__(self):
+        super().__init__(__file__)
+
     def build(self):
-        parent = Widget()
-        self.painter = MyPaintWidget()
-        clearbtn = Button(text='Clear')
-        clearbtn.bind(on_release=self.clear_canvas)
-        parent.add_widget(self.painter)
-        parent.add_widget(clearbtn)
-        return parent
-
-    def clear_canvas(self, obj):
-        self.painter.canvas.clear()
+        Window.clearcolor = (1, 1, 1, 1)
+        print(self.A1)
+        return ms
 
 
-if __name__ == '__main__':
-    MyPaintApp().run()
+if __name__ == "__main__":
+    StartApp().run()

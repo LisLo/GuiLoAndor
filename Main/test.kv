@@ -1,13 +1,23 @@
-#:include kv/andor1.kv
-#:include kv/andor2.kv
-#:include kv/andor3.kv
-#:include kv/bonus.kv
-#:include kv/rest.kv
+PageLayoutExample:
 
-ScreenManager:
-    size_hint: 1, 0.699
-    pos_hint: {"top": .799, "left": 1}
-    id: screen_manager
-        Games:
-            name: "games"
-            id: game
+<PageLayoutExample@PageLayout>:
+    Games:
+    # Andor:
+
+<Games@PageLayout>:
+    Button:
+        text: "Andor Teil 1"
+        id:btn1
+        background_normal: "Main/Pictures/Andor-Trilogie-1.jpg"
+    Button:
+        text: "Andor Teil 2"
+        id:btn2
+        background_normal: "Main/Pictures/Andor-Trilogie-2.jpg"
+    Button:
+        text: "Andor Teil 3"
+        id:btn3
+        background_normal: "Main/Pictures/Andor-Trilogie-3.jpg"
+    Button:
+        text: "Bonus Legenden"
+        id:btn3
+        background_normal: "Main/Pictures/Schwarze_Kogge.png"

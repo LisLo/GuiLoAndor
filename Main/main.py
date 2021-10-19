@@ -16,7 +16,6 @@ class StartApp(GetInput, App):
     def __init__(self):
         super().__init__(__file__)
 
-
     def build(self):
         pass
 
